@@ -1,0 +1,158 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FITHO</title>
+    <link rel="shortcut icon"  type="image/PNG" sizes="128*128" href="{%static 'img/Capture.PNG'%}">
+    <link rel="stylesheet" href="{%static  'css/homepage.css' %}">
+
+
+
+</head>
+
+<body>
+    <header>
+        <div class="smalllogo">
+            <a href="#welcome-section" class="logolink">
+                <h2> <i class="fas fa-code"></i> coding sumit</h2>
+            </a>
+        </div>
+        <button class="nav-toggle">
+            <span class="hamburger">
+                <div class="bar1"></div>
+                <div class="bar2"></div>
+                <div class="bar3"></div>
+            </span>
+        </button>
+        <nav class="nav" id="navbar">
+            <div class="logo">
+                <a href="nav.html" id="logo">
+                    <h1> <i class="fasfacode" id="name" style="font-size: 20px;"></i> <img src="{%static 'img/Capture.PNG'%}"
+                            alt=""></h1>
+                </a>
+            </div>
+            <ul class="nav_list" id="navlinkitems">
+                <li class="nav_item">
+                    <a href="homepage" class="nav_link" id="home">Home</a>
+                </li>
+                <li class="nav_item">
+                    <a href="aboutus" class="nav_link" id="about"> About us</a>
+                </li>
+                <li class="nav_item">
+                    <a href="blog" class="nav_link" id="service">Blogs</a>
+                </li>
+                <li class="nav_item">
+                    <a href="renting" class="nav_link" id="service">Renting</a>
+                </li>
+                {% if user.is_authenticated %}
+                <li class="nav_item">
+                    <a href="#" class="nav_link" id="work">Hello {{user.username}}</a>
+                </li>
+                <li class="nav_item">
+                    <a href="logout" class="nav_link" id="work">Logout</a>
+                </li>
+                {% else %}
+                <li class="nav_item">
+                    <a href="login" class="nav_link" id="work">Log in</a>
+                </li>
+                <li class=" nav_item">
+                    <a href="signup" class="nav_link" id="contact">Signup</a>
+                </li>
+                {%endif%}
+            </ul>
+        </nav>
+    </header>
+    <div class="maincontainer">
+        <div class="tagline">
+            <h1>
+                Choose us,Choose fitness
+            </h1>
+            <h3>
+                One of the best web-app to be fit
+            </h3>
+        </div>
+        <div class="getstarted">
+            <div class="tagline2">
+                <h2>
+                    Get Ready to be Fit with Fitho
+                </h2>
+                {% if user.is_authenticated %}
+                <span>
+                    <a href="userform"> Get Started</a>
+                </span>
+                {% else %}
+                <span>
+                    <a href="signup"> Get Started</a>
+                </span>
+                {%endif%}
+
+            </div>
+        </div>
+    </div>
+    <div class="here">
+        <h2>
+            Here is the Result
+        </h2>
+    </div>
+    <div class="story">
+        <div class="person1">
+            <img src="{%static 'img/fat to fit.jpg'%}" alt="">
+            <p>
+                Mike Tyson<br>Florida,USA
+            </p>
+        </div>
+        <div class="person1">
+            <img src="{%static 'img/fat to fit.jpg'%}" alt="">
+            <p>
+                John Cena<br>Washington DC,USA
+            </p>
+        </div>
+    </div>
+    <div class="prizes">
+        <p>
+            YOUR MOTIVATION,<br>OUR SOLUTION
+        </p>
+    </div>
+    <div class="footer-dark">
+        <footer>
+            <div class="container">
+                <div class="row">
+                    <div class="service">
+                        <h3>Services</h3>
+                        <ul>
+                            <li><a href="#">Web design</a></li>
+                            <li><a href="#">Development</a></li>
+                            <li><a href="#">Hosting</a></li>
+                        </ul>
+                    </div>
+                    <div class="about">
+                        <h3>About</h3>
+                        <ul>
+                            <li><a href="#">Company</a></li>
+                            <li><a href="#">Team</a></li>
+                            <li><a href="#">Careers</a></li>
+                        </ul>
+                    </div>
+                    <div class="FITHO">
+                        <h3>FITHO</h3>
+                        <p>Praesent sed lobortis mi. Suspendisse vel placerat ligula. Vivamus ac sem lacus. Ut vehicula
+                            rhoncus elementum. Etiam quis tristique lectus. Aliquam in arcu eget velit pulvinar dictum
+                            vel in justo.
+                        </p>
+                    </div>
+                </div>
+                <p class="copyright">Company Name © 2018</p>
+            </div>
+        </footer>
+    </div>
+
+    <script src="{%static 'js/homepage.js'%}"></script>
+
+
+</body>
+
+</html>

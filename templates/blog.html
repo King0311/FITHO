@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FITHO</title>
+    <link rel="shortcut icon" type="image/PNG" sizes="128*128" href="/static/img/Capture.PNG">
+    <link rel="stylesheet" href="/static/css/blog.css">
+</head>
+
+<body>
+    <header>
+        <div class="smalllogo">
+            <a href="#welcome-section" class="logolink">
+                <h2> <i class="fas fa-code"></i> coding sumit</h2>
+            </a>
+        </div>
+        <button class="nav-toggle">
+            <span class="hamburger">
+                <div class="bar1"></div>
+                <div class="bar2"></div>
+                <div class="bar3"></div>
+            </span>
+        </button>
+        <nav class="nav" id="navbar">
+            <div class="logo">
+                <a href="nav.html" id="logo">
+                    <h1> <i class="fasfacode" id="name" style="font-size: 20px;"></i> <img src="/static/img/Capture.PNG"
+                            alt=""></h1>
+                </a>
+            </div>
+            <ul class="nav_list" id="navlinkitems">
+                <li class="nav_item">
+                    <a href="homepage" class="nav_link" id="home">Home</a>
+                </li>
+                <li class="nav_item">
+                    <a href="aboutus" class="nav_link" id="about"> About us</a>
+                </li>
+                <li class="nav_item">
+                    <a href="blog" class="nav_link" id="service">Blogs</a>
+                </li>
+                <li class="nav_item">
+                    <a href="renting" class="nav_link" id="service">Renting</a>
+                </li>
+                {% if user.is_authenticated %}
+                <li class="nav_item">
+                    <a href="#" class="nav_link" id="work">Hello {{user.username}}</a>
+                </li>
+                <li class="nav_item">
+                    <a href="logout" class="nav_link" id="work">Logout</a>
+                </li>
+                {% else %}
+                <li class="nav_item">
+                    <a href="login" class="nav_link" id="work">Log in</a>
+                </li>
+                <li class=" nav_item">
+                    <a href="signup" class="nav_link" id="contact">Signup</a>
+                </li>
+                {%endif%}
+            </ul>
+        </nav>
+    </header>
+    <div class="maincontainer">
+        <div class="heading">
+            <p>
+                Every question a beginner has<br> before start the joureny of fitness
+            </p>
+        </div>
+        <div class="question1">
+            <h1>I don’t know how to use the equipment or do any workouts. How do I get started?</h1>
+            <div class="answer1">
+                <div class="ans1">
+                    <p>As a complete beginner, the gym can certainly be an intimidating place. This is why I suggest
+                        hiring
+                        a
+                        personal trainer for a good eight to 10 sessions. He or she can teach you what muscle groups
+                        each
+                        piece
+                        of equipment works, as well as proper exercise technique, breathing patterns, and rep cadence. A
+                        good
+                        trainer will also help you develop a workout program that is suited to your present level of
+                        fitness,
+                        particular goals, and that addresses any injuries or limitations that you may have.
+                    </p>
+                </div>
+                <div class="written_by1">
+                    <img src="/static/img/trainerg-removebg-preview.png" height="73%" alt="" srcset="">
+                    <p>
+                        Head Trainer,<br> Gold Gym,Pakistan
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="question2">
+            <h1>What type of training should I do to lose weight?</h1>
+            <div class="answer2">
+                <div class="ans2">
+                    <p>When it comes to losing weight, you need a combination of weight/resistance training and
+                        cardiovascular exercise. Many people make the error of performing too much cardio and neglecting
+                        weightlifting, thinking that only treadmills, stationary bikes, and stair steppers are
+                        responsible for burning fat—but this is far from true.
+
+                        While cardio will certainly help you burn extra calories, it’s weight training that is going to
+                        stimulate the metabolism (so that you become a fat-burning machine), change the composition of
+                        your body, and bring about the shape and contours you want. I suggest at least three to four
+                        days per week lifting weights and four to five performing cardio—preferably first thing in the
+                        morning or right after resistance training.
+                    </p>
+                </div>
+                <div class="written_by2">
+                    <img src="/static/img/trainerg-removebg-preview_mirror.png" height="73%" alt="" srcset="">
+                    <p>
+                        Head Trainer,<br> Gold Gym,Pakistan
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="question1">
+            <h1>How often do I need to work out?</h1>
+            <div class="answer1">
+                <div class="ans1">
+                    <p>How often you need to work out depends on your fitness level, goals, and time limitations. The
+                        loftier the goal, the more time you will have to spend going after it. That said, if you have a
+                        very demanding job, a family, or other important personal responsibilities, you may not be able
+                        to spend hours per week working out. Then you’ll need to be patient when it comes to reaching
+                        your goal.
+
+                        To make decent progress you need to hit the gym at least three days per week for an hour at a
+                        time. However, as time passes, you’ll begin to require more time in order to see continued
+                        progress. I suggest starting out with three gym sessions per week and adding to your program
+                        every month or so.
+                    </p>
+                </div>
+                <div class="written_by1">
+                    <img src="/static/img/trainerg-removebg-preview.png" height="73%" alt="" srcset="">
+                    <p>
+                        Head Trainer,<br> Gold Gym,Pakistan
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="question2">
+            <h1>Should I start a supplement regimen?</h1>
+            <div class="answer2">
+                <div class="ans2">
+                    <p>In the beginning of your health and fitness journey, the main focus should be on implementing an
+                        intelligent and efficient workout regimen and a healthy and balanced nutrition program. Anyone
+                        who tells you to immediately jump on all sorts of sports supplements is either misinformed or
+                        trying to make a buck (well, most of them). After spending eight to 12 solid weeks in the gym,
+                        working hard and consistently while carefully following a sound diet, it’s appropriate to think
+                        about adding supplements into the mix
+                    </p>
+                </div>
+                <div class="written_by2">
+                    <img src="/static/img/trainerg-removebg-preview_mirror.png" height="73%" alt="" srcset="">
+                    <p>
+                        Head Trainer,<br> Gold Gym,Pakistan
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+    {% for blog in blogs %}
+        <div class="question1">
+            <h1>{{blog.question1}}</h1>
+            <div class="answer1">
+                <div class="ans1">
+                    <p>
+                        {{blog.answer1}}
+                    </p>
+                </div>
+                <div class="written_by1">
+                    <img src="{{ MEDIA_URL }}{{blog.img1.url}}" height="73%" alt="" srcset="">
+                    <p>
+                        Head Trainer,<br> Gold Gym,Pakistan
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="question2">
+            <h1>{{blog.question2}}</h1>
+            <div class="answer2">
+                <div class="ans2">
+                    <p>
+                        {{blog.answer2}}
+                    </p>
+                </div>
+                <div class="written_by2">
+                    <img src="{{ MEDIA_URL }}{{blog.img2.url}}" height="73%" alt="" srcset="">
+                    <p>
+                        Head Trainer,<br> Gold Gym,Pakistan
+                    </p>
+                </div>
+            </div>
+        </div>
+    {%endfor%}
+
+
+
+
+
+
+
+    <div class="footer-dark">
+        <footer>
+            <div class="container">
+                <div class="row">
+                    <div class="service">
+                        <h3>Services</h3>
+                        <ul>
+                            <li><a href="#">Web design</a></li>
+                            <li><a href="#">Development</a></li>
+                            <li><a href="#">Hosting</a></li>
+                        </ul>
+                    </div>
+                    <div class="about">
+                        <h3>About</h3>
+                        <ul>
+                            <li><a href="#">Company</a></li>
+                            <li><a href="#">Team</a></li>
+                            <li><a href="#">Careers</a></li>
+                        </ul>
+                    </div>
+                    <div class="FITHO">
+                        <h3>FITHO</h3>
+                        <p>Praesent sed lobortis mi. Suspendisse vel placerat ligula. Vivamus ac sem lacus. Ut vehicula
+                            rhoncus elementum. Etiam quis tristique lectus. Aliquam in arcu eget velit pulvinar dictum
+                            vel in justo.
+                        </p>
+                    </div>
+                </div>
+                <p class="copyright">Company Name © 2018</p>
+            </div>
+        </footer>
+    </div>
+    <script src="/static/js/homepage.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FITHO</title>
+    <link rel="shortcut icon" type="image/PNG" sizes="128*128" href="/static/img/Capture.PNG">
+    <link rel="stylesheet" href="/static/css/aboutus.css">
+</head>
+
+<body>
+    <header>
+        <div class="smalllogo">
+            <a href="#welcome-section" class="logolink">
+                <h2> <i class="fas fa-code"></i> coding sumit</h2>
+            </a>
+        </div>
+        <button class="nav-toggle">
+            <span class="hamburger">
+                <div class="bar1"></div>
+                <div class="bar2"></div>
+                <div class="bar3"></div>
+            </span>
+        </button>
+        <nav class="nav" id="navbar">
+            <div class="logo">
+                <a href="nav.html" id="logo">
+                    <h1> <i class="fasfacode" id="name" style="font-size: 20px;"></i> <img src="/static/img/Capture.PNG"
+                            alt=""></h1>
+                </a>
+            </div>
+            <ul class="nav_list" id="navlinkitems">
+                <li class="nav_item">
+                    <a href="homepage" class="nav_link" id="home">Home</a>
+                </li>
+                <li class="nav_item">
+                    <a href="aboutus" class="nav_link" id="about"> About us</a>
+                </li>
+                <li class="nav_item">
+                    <a href="blog" class="nav_link" id="service">Blogs</a>
+                </li>
+                <li class="nav_item">
+                    <a href="renting" class="nav_link" id="service">Renting</a>
+                </li>
+                {% if user.is_authenticated %}
+                <li class="nav_item">
+                    <a href="#" class="nav_link" id="work">Hello {{user.username}}</a>
+                </li>
+                <li class="nav_item">
+                    <a href="logout" class="nav_link" id="work">Logout</a>
+                </li>
+                {% else %}
+                <li class="nav_item">
+                    <a href="login" class="nav_link" id="work">Log in</a>
+                </li>
+                <li class=" nav_item">
+                    <a href="signup" class="nav_link" id="contact">Signup</a>
+                </li>
+                {%endif%}
+            </ul>
+        </nav>
+    </header>
+    <div class="how-we_work">
+        <div class="heading">
+            What Is FITHO
+        </div>
+        <div class="what_is_fitho">
+            <p>Due to the busy life and the race of been succesfull many people according to the statistics 70% of
+                indian had never done any physical activity from past 5 years. Also, average person had never gone to a
+                gym and try to maintain their body. By seeing the problem of timing and expensive gym fees here we
+                introduces you a self gym web-app organization FITHO.<br><br>
+                FITHO is the organization is a form of web-app which works with the health sector related problem. FITHO
+                gives the required diet and exercise by taking the input from user like height, weight and area with
+                excess fat in your body.<br><br>
+                FITHO also motivates user by giving exciting prize money or gift voucher etc, when user complete the
+                given task in the given time period .<br><br>
+                FITHO generates revenue by giving basic gym equipments on rent and also available for sell in very
+                affordable and reasonable prize. Also we keep mega-event in which the user from world-wide will compete
+                with each other and the winner will get a mega prize like phones and big prizes.<br><br>
+                Thus FITHO has a potential to get large amount of user all over the world and help our user to save
+                valueable money and time.
+            </p>
+        </div>
+        <div class="heading">
+            How We Funtion
+        </div>
+        <div class="what_is_fitho">
+            <p>
+                <span>
+                    Step1:-Be a memeber of FITHO<br>
+                </span>
+                To become a memeber for Fitho make an account on Fitho with a uniqne username and password.
+                After this you will be member of are family for rest of your life.When ever you become back, log
+                in with the same username and password. <br><br>
+                <span>
+                    Step2:-Get Started<br>
+                </span>
+                After being a member of Fitho  you need to tell us your height, weight, area of body you want to work on.
+                This all information will be usefull to us for become a helping hand for you by giving you a proper workout plan
+                with diet plan too.<br><br>
+                <span>
+                    Step2:-Joureny Begin Now<br>
+                </span>
+                Body transformation joureny begin from the that day itself.A time period will be given to you in which you need
+                to show your transformation by photos. For double cheaking we will keep a video call, and if we find that your 
+                transformatiom is true a special prize will be alloted to you.
+            </p>
+        </div>
+        <div class="heading">
+            We Also Rent
+        </div>
+        <div class="what_is_fitho">
+            <p>
+                As we know in this expensive world owning gym equipments or going to gym is so difficult for a common man.
+                By seeing this problem we also have a facility of renting the gym equipment in affordable prizes and also
+                you can buy them in EMI or by full payment in one time.<br><br>
+                We have equipment likes dumbells,bench for bench press, even a thredmill and cycle are rented and sell by 
+                Fiho
+            </p>
+        </div>
+
+    </div>
+    <div class="footer-dark">
+        <footer>
+            <div class="container">
+                <div class="row">
+                    <div class="service">
+                        <h3>Services</h3>
+                        <ul>
+                            <li><a href="#">Web design</a></li>
+                            <li><a href="#">Development</a></li>
+                            <li><a href="#">Hosting</a></li>
+                        </ul>
+                    </div>
+                    <div class="about">
+                        <h3>About</h3>
+                        <ul>
+                            <li><a href="#">Company</a></li>
+                            <li><a href="#">Team</a></li>
+                            <li><a href="#">Careers</a></li>
+                        </ul>
+                    </div>
+                    <div class="FITHO">
+                        <h3>FITHO</h3>
+                        <p>Praesent sed lobortis mi. Suspendisse vel placerat ligula. Vivamus ac sem lacus. Ut vehicula
+                            rhoncus elementum. Etiam quis tristique lectus. Aliquam in arcu eget velit pulvinar dictum
+                            vel in justo.
+                        </p>
+                    </div>
+                </div>
+                <p class="copyright">Company Name © 2018</p>
+            </div>
+        </footer>
+    </div>
+    <script src="/static/js/homepage.js"></script>
+
+</body>
+
+</html>

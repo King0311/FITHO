@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FITHO </title>
+    <link rel="shortcut icon" type="image/PNG" sizes="128*128" href="/static/img/Capture.PNG">
+    <link rel="stylesheet" href="/static/css/signup.css">
+</head>
+
+<body>
+    <div class="maincontainer">
+        <div class="signup_form">
+            <div class="title">
+                <div class="img_logo">
+                    <img src="/static/img/Capture.PNG" width="150px" height="100px" alt="logo" srcset="">
+                </div>
+                <div class="back">
+                    <p><a href="homepage">Back To Home</p></a>
+                </div>
+            </div>
+            <div class="textarea1">
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                </p>
+            </div>
+            {%for message in messages%}
+            <h4 style="color: red; text-align: center;">{{message}}</h4>
+            {%endfor%}
+            <div class="form">
+                <form action="signup" method="POST">
+                    {% csrf_token %}
+                    <p>Username</p>
+                    <input class="username" type="text" name="username" id="username" required/><br>
+                    <p>Email-id</p>
+                    <input class="username" type="email" name="email" id="email" required/><br>
+                    <p>Password</p>
+                    <input class="password" type="password" name="password" id="password" required/><br>
+                    <p> Confrim Your Password</p>
+                    <input class="password" type="password" name="password2" id="password2" required/><br>
+                    <input class="submit" type="submit" value="Create your account">
+                </form>
+            </div>
+            <div class="signup">
+                <p>
+                    Already have an account?<a href="login">Log In</a>
+                </p>
+            </div>
+        </div>
+        <div class="user_feedback">
+            <div class="textarea2">
+                <p>
+                    "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos esse harum recusandae et repellendus
+                    nostrum molestiae."
+                </p>
+            </div>
+            <div class="user_info">
+                <div class="user_img">
+                    <img src="/Assets/User Testimonial.svg" alt="" srcset="">
+                </div>
+                <div class="user_work">
+                    <p>
+                        Peter Parker
+                    </p>
+                    <span>Hiker</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer-dark">
+        <footer>
+            <div class="container">
+                <div class="row">
+                    <div class="service">
+                        <h3>Services</h3>
+                        <ul>
+                            <li><a href="#">Web design</a></li>
+                            <li><a href="#">Development</a></li>
+                            <li><a href="#">Hosting</a></li>
+                        </ul>
+                    </div>
+                    <div class="about">
+                        <h3>About</h3>
+                        <ul>
+                            <li><a href="#">Company</a></li>
+                            <li><a href="#">Team</a></li>
+                            <li><a href="#">Careers</a></li>
+                        </ul>
+                    </div>
+                    <div class="FITHO">
+                        <h3>FITHO</h3>
+                        <p>Praesent sed lobortis mi. Suspendisse vel placerat ligula. Vivamus ac sem lacus. Ut vehicula
+                            rhoncus elementum. Etiam quis tristique lectus. Aliquam in arcu eget velit pulvinar dictum
+                            vel in justo.
+                        </p>
+                    </div>
+                </div>
+                <p class="copyright">Company Name © 2018</p>
+            </div>
+        </footer>
+    </div>
+
+</body>
+
+</html>
