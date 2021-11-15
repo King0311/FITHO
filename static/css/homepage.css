@@ -12,6 +12,7 @@ header{
 }
 
 
+
 .nav {
     height: 6rem;
     width: 100%;
@@ -204,9 +205,7 @@ a {
 .service ul li a,.about ul li a{
     color: whitesmoke;
 }
-.service ul li a,.about ul li a{
-    list-style: none;
-}
+
 .about{
     flex: 1;
     
