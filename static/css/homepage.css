@@ -203,6 +203,9 @@ a {
 .service ul li a,.about ul li a{
     color: whitesmoke;
 }
+.service ul li ,.about ul li {
+    list-style: none;
+}
 
 .about{
     flex: 1;
