@@ -124,9 +124,7 @@
 .service ul li a,.about ul li a{
     color: whitesmoke;
 }
-.service ul,.about ul{
-    list-style: none;
-}
+
 .about{
     flex: 1;
     
@@ -136,9 +134,7 @@
     padding: 0px 100px 0px 0px;
 }
 
-ul li{
-    list-style: none;
-}
+
 
 .copyright{
     text-align: center;
