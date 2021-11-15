@@ -39,4 +39,3 @@ class userform(ModelForm):
                 'class':'form-control'
             }),
         }
-        

@@ -5,6 +5,7 @@ from django.contrib.auth.models import User,auth
 from .models import blogs
 from .form import userform
 
+
 def homepage(request):
     return render( request,"homepage.html")
 
