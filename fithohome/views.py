@@ -83,6 +83,7 @@ def inputform(request):
 
     return render(request,"userform.html",{'form':form})
 
+
 def logout(request):
     auth.logout(request)
     return redirect("/")
