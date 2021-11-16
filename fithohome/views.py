@@ -80,8 +80,8 @@ def inputform(request):
             pass
     else:
         pass
-
     return render(request,"userform.html",{'form':form})
+
 
 
 def logout(request):
