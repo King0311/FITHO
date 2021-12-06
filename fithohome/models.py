@@ -36,5 +36,11 @@ class renting_form_data(models.Model):
     phone=models.BigIntegerField(max_length=100,default='')
     add=models.CharField(max_length=100,default='')
 
+class approval_data(models.Model):
+    name=models.CharField(max_length=100,default='')
+    phone=models.BigIntegerField(max_length=100,default='')
+    add=models.CharField(max_length=100,default='')
+    approval=models.BooleanField(default=True)
+
 
     

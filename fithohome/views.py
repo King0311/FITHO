@@ -2,7 +2,7 @@ from django.shortcuts import render,redirect
 from django.http import HttpRequest,HttpResponse
 from django.contrib import messages
 from django.contrib.auth.models import User,auth
-from .models import blogs
+from .models import blogs,approval_data
 from .form import userform,renting_form
 
 
@@ -72,7 +72,8 @@ def rentingformdata(request):
             pass
     else:
         pass
-    return render(request,"rentingform.html",{'form':form})
+    order_approval=approval_data.objects.all()
+    return render(request,"rentingform.html",{'form':form},order_approval)
 
 def inputform(request):
     form=userform()
