@@ -97,7 +97,11 @@
                 <div class="person1">
                     <img src="{%static 'img/1621612626-run-dumbbells-5-1621612621.jpg'%}" alt="">
                     <div class="btn">
+                        {% if user.is_authenticated %}
                         <a href="rentingform">RENT NOW</a>
+                        {% else %}
+                        <a href="signup">RENT NOW</a>
+                        {%endif%}
                     </div>
                 </div>
                 <div class="person1">

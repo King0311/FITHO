@@ -29,7 +29,9 @@ class userdata(models.Model):
     fat=models.CharField(max_length=100, choices=FAT_CHOICES)
     build=models.CharField(max_length=100,choices=FAT_CHOICES)
 
-class rentingdata(models.Model):
+
+
+class renting_form_data(models.Model):
     name=models.CharField(max_length=100,default='')
-    phone=models.BigIntegerField()
-    add=models.CharField(max_length=100,default="")
+    phone=models.BigIntegerField(max_length=100,default='')
+    add=models.CharField(max_length=100,default='')

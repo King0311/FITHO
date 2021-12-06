@@ -1,12 +1,12 @@
 from django.contrib import admin
 
-from .models import blogs,userdata,rentingdata
+from .models import *
 
 
 # Register your models here.
 admin.site.register(blogs)
 admin.site.register(userdata)
-admin.site.register(rentingdata)
+admin.site.register(renting_form_data)
 
 
 

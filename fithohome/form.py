@@ -1,5 +1,5 @@
 from django.forms import ModelForm
-from .models import userdata,rentingdata
+from .models import userdata,renting_form_data
 from django import forms
 
 class userform(ModelForm):
@@ -41,9 +41,9 @@ class userform(ModelForm):
         }
 
 
-class rentingform(ModelForm):
+class renting_form(ModelForm):
     class Meta:
-        model=rentingdata
+        model=renting_form_data
         fields= ['name','phone','add']
         widgets= {
             'name':forms.TextInput(attrs={
@@ -56,3 +56,4 @@ class rentingform(ModelForm):
                 'class':'form-control'
             }),
         }
+        
