@@ -132,6 +132,21 @@ a {
     grid-column: 5/7;
     grid-row: 1/2;
 }
+.app{
+    grid-column: 1/7;
+    grid-row: 2/3;
+}
+.submit{
+    grid-column: 3/5;
+    grid-row: 4/5;
+    background-color: black;
+    color: white;
+    height: 3em;
+    width: 20em;
+    margin: 20px auto;
+    border-radius: 9px;   
+}
+
 
 .form-control{
     padding: 5px 0px 5px 10px;
