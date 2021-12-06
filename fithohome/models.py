@@ -35,3 +35,4 @@ class renting_form_data(models.Model):
     name=models.CharField(max_length=100,default='')
     phone=models.BigIntegerField(max_length=100,default='')
     add=models.CharField(max_length=100,default='')
+    
