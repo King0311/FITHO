@@ -7,7 +7,7 @@ from .models import *
 admin.site.register(blogs)
 admin.site.register(userdata)
 admin.site.register(renting_form_data)
-admin.site.register(approval_data)
+# admin.site.register(approval_data)
 
 
 
