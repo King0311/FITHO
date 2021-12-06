@@ -3,7 +3,7 @@ from django.http import HttpRequest,HttpResponse
 from django.contrib import messages
 from django.contrib.auth.models import User,auth
 from .models import blogs
-from .form import userform
+from .form import userform, rentingform
 
 
 def homepage(request):
@@ -56,6 +56,24 @@ def aboutus(request):
 def renting(request):
     return render(request,"renting.html")
 
+def rentingformdata(request):
+    form2=rentingform()
+    if request.method=='POST':
+        form2=rentingform(request.POST)
+        if form2.is_valid():
+            data1=form2.save()
+            data12=form2.cleaned_data['name']
+            data22=form2.cleaned_data['phone']
+            data32=form2.cleaned_data['add']
+            print(data12)
+            print(data22)
+            print(data32)
+        else:
+            pass
+    else:
+        pass
+    return render(request,"rentingform.html",{'form2':form2})
+
 def inputform(request):
     form=userform()
     if request.method=='POST':
@@ -81,8 +99,6 @@ def inputform(request):
     else:
         pass
     return render(request,"userform.html",{'form':form})
-
-
 
 def logout(request):
     auth.logout(request)

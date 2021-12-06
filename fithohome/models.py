@@ -28,3 +28,8 @@ class userdata(models.Model):
     weight=models.IntegerField()
     fat=models.CharField(max_length=100, choices=FAT_CHOICES)
     build=models.CharField(max_length=100,choices=FAT_CHOICES)
+
+class rentingdata(models.Model):
+    name=models.CharField(max_length=100,default='')
+    phone=models.BigIntegerField()
+    add=models.CharField(max_length=100,default="")
