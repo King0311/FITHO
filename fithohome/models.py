@@ -32,10 +32,14 @@ class userdata(models.Model):
 
 
 class renting_form_data(models.Model):
+    ORDER_CHOICES = (
+        ('Approved','Approved'),
+        ('Declined,Sorry', 'Declined'),
+    )
     name=models.CharField(max_length=100,default='')
     phone=models.BigIntegerField(max_length=100,default='')
     add=models.CharField(max_length=100,default='')
-    approval=models.BooleanField(default=True)
+    approval=models.CharField(max_length=100,choices=ORDER_CHOICES,default='.....')
 
 
 

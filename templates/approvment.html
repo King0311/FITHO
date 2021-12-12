@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FITHO</title>
+    <link rel="shortcut icon" type="image/PNG" sizes="128*128" href="/static/img/Capture.PNG">
+    <link rel="stylesheet" href="/static/css/blog.css">
+</head>
+
+<body>
+    {%for app in apps%}
+    <div class="hello">
+        <div class="hi">{{app.name}}</div>
+        <div class="hi">{{app.phone}}</div>
+        <div class="hi">{{app.add}}</div>
+        <div class="hi">your order has been {{app.approval}}</div>
+    </div>
+    {%endfor%}
+    
+
+    <!-- {%for message in messages%}
+    <h4 style="color: red; text-align: center;">{{message}}</h4>
+    {%endfor%} -->
+</body>
+
+</html>

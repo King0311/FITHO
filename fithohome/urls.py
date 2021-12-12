@@ -12,5 +12,7 @@ urlpatterns=[
     path("userform",views.inputform,name="userform"),
     path("renting",views.renting,name="renting"),
     path("logout",views.logout,name="logout"),
-    path("rentingform",views.rentingformdata,name="renting")
+    path("rentingform",views.rentingformdata,name="renting"),
+    path("approvment",views.app,name="app"),
+
 ]
