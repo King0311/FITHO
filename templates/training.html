@@ -6,17 +6,17 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FITHO</title>
+    <title>Document</title>
     <link rel="shortcut icon" type="image/PNG" sizes="128*128" href="{%static 'img/Capture.PNG'%}">
-    <link rel="stylesheet" href="{%static 'css/userform.css'%}">
-
+    <link rel="stylesheet" href="{%static  'css/training.css' %}">
 </head>
 
 <body>
+
     <header>
         <div class="smalllogo">
             <a href="#welcome-section" class="logolink">
-                <h2> <i class="fas fa-code"></i>FITHO</h2>
+                <h2> <i class="fas fa-code"></i> coding sumit</h2>
             </a>
         </div>
         <button class="nav-toggle">
@@ -28,9 +28,9 @@
         </button>
         <nav class="nav" id="navbar">
             <div class="logo">
-                <a href="#" id="logo">
-                    <h1> <i class="fasfacode" id="name" style="font-size: 20px;"></i> <img src="/static/img/Capture.PNG"
-                            alt=""></h1>
+                <a href="nav.html" id="logo">
+                    <h1> <i class="fasfacode" id="name" style="font-size: 20px;"></i> <img
+                            src="{%static 'img/Capture.PNG'%}" alt=""></h1>
                 </a>
             </div>
             <ul class="nav_list" id="navlinkitems">
@@ -44,7 +44,7 @@
                     <a href="blog" class="nav_link" id="service">Blogs</a>
                 </li>
                 <li class="nav_item">
-                    <a href="#skills-section" class="nav_link" id="service">Renting</a>
+                    <a href="renting" class="nav_link" id="service">Renting</a>
                 </li>
                 {% if user.is_authenticated %}
                 <li class="nav_item">
@@ -65,64 +65,35 @@
         </nav>
     </header>
 
-    <div class="maincontainer">
-        <div class="heading">
-            <p>
-                Fill-Up The Info
-            </p>
+    <div class="training_section">
+        <div class="head1">
+            <h1>Here's Your Training Execrises. </h1>
         </div>
-        <form class="form" method="POST" action="training">
-            {% csrf_token %}
-            <div class="fullname">
-                <p>Full Name</p>
-                <div class="username">
-                    {{form.name}}
+        {%if data.build == "belly"%}
+            <div class="exe">
+                <div class="exe1">
+                    <img class="exe_img" src="/static/img/exe11.gif" alt="" srcset="">
+                    <div class="exe_info"></div>
+                </div>
+                <div class="exe1">
+                    <img class="exe_img" src="/static/img/exe2.gif" alt="" srcset="">
+                    <div class="exe_info"></div>
                 </div>
             </div>
-            <div class="phone">
-                <p>Phone No</p>
-                <div class="username">
-                    {{form.phone}}
+        {%endif%}
+        {%if data.build == "legs"%}
+            <div class="exe">
+                <div class="exe1">
+                    <img class="exe_img" src="/static/img/exe3.gif" alt="" srcset="">
+                    <div class="exe_info"></div>
+                </div>
+                <div class="exe1">
+                    <img class="exe_img" src="/static/img/exe4.gif" alt="" srcset="">
+                    <div class="exe_info"></div>
                 </div>
             </div>
-            <div class="email">
-                <p>Email</p>
-                <div class="username">
-                    {{form.email}}
-                </div>
-            </div>
-            <div class="height">
-                <p>Height(IN CMS)</p>
-                <div class="username">
-                    {{form.height}}
-                </div>
-            </div>
-            <div class="weight">
-                <p>Weight(IN KGS)</p>
-                <div class="username">
-                    {{form.weight}}
-                </div>
-            </div>
-            <div class="fat">
-                <p>Excess Fat</p>
-                <div class="username">
-                    {{form.fat}}
-                </div>
-            </div>
-            <div class="build">
-                <p>Want To Build</p>
-                <div class="username">
-                    {{form.build}}
-                </div>
-            </div>
-            <input type="submit" value="submit" class="submit">
-        </form>
+        {%endif%}
     </div>
-    <!-- <form action="" method="post">
-        {% csrf_token %}
-        {{form.as_p}}
-        <input type="submit" value="submit">
-    </form> -->
 
 
 
@@ -154,12 +125,13 @@
                         </p>
                     </div>
                 </div>
-                <p class="copyright">Company Name © 2018</p>
+                <p class="copyright">FITHO © 2021</p>
             </div>
         </footer>
     </div>
 
-    <script src="/static/js/homepage.js"></script>
+    <script src="{%static 'js/homepage.js'%}"></script>
+
 </body>
 
 </html>
